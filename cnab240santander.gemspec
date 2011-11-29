@@ -5,11 +5,11 @@ require "cnab240santander/version"
 Gem::Specification.new do |s|
   s.name        = "cnab240santander"
   s.version     = Cnab240santander::Version::STRING
-  s.authors     = ["Lairton"]
-  s.email       = ["lairton@zertico.com.br"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Lairton Borges"]
+  s.email       = ["lairton@gmail.com"]
+  s.homepage    = "https://github.com/ljoseppi/"
+  s.summary     = "Gem to read the cnab240 return file of Santander Bank (Brazil)"
+  s.description = s.summary
 
   s.rubyforge_project = "cnab240santander"
 

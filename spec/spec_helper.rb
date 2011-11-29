@@ -1,5 +1,6 @@
 require "mocha"
 require 'active_support'
+require 'cnab240santander'
 
 Dir[File.dirname(__FILE__) + "/../lib/**/*.rb"].each {|file| require File.expand_path(file)}
 

@@ -1,5 +1,5 @@
 module Cnab240santander
-  class Formatacao
+  module Formatacao
     def formataData(dt)
       puts dt
       if dt.split("").uniq != ["0"]

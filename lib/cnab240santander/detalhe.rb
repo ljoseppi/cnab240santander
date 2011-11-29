@@ -1,5 +1,5 @@
 module Cnab240santander
-  class Detalhe < Cnab240santander::Base
+  class Detalhe < Base
     def self.processar(linha, segmento)
       vlinha = Hash.new
 
