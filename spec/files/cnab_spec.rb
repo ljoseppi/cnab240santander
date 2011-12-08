@@ -22,4 +22,11 @@ describe "Cnab240santander" do
       cnab.linhas.should be_kind_of(Array)
     end
   end
+
+  context "Details merged" do
+    it "should parse the details and merge the U and T segments" do
+      cnab = Cnab240santander.retorno(:path => File.dirname(__FILE__)+"/../../RETORNO.TXT", :retorna => 3, :merge => true)
+      cnab.linhas.should be_kind_of(Array)
+    end
+  end
 end

@@ -46,7 +46,7 @@ module Cnab240santander
           #Serviço
           vlinha["num_registro_lote2"]      = linha[8..12] #   Num  //No Sequencial do Registro no Lote
           vlinha["segmento2"]               = linha[13..13] #   Alfa  //Cód. segmento do registro detalhe - U
-          vlinha["res_banco3"]              = linha[14..14] #   Alfa //Reservado (uso Banco) - Brancos
+          vlinha["res_banco4"]              = linha[14..14] #   Alfa //Reservado (uso Banco) - Brancos
           vlinha["cod_movimento2"]          = linha[15..16] #   Num  //Código de movimento (ocorrência)
           #Valores
           vlinha["juros_multa_encargos"]    = preparaMoeda(linha[17..31], 2) #   Num  //Juros / Multa / Encargos - 2 decimais
@@ -65,7 +65,7 @@ module Cnab240santander
           vlinha["valor_ocorrencia_sacado"] = preparaMoeda(linha[165..179], 2) #   Num  //Valor da ocorrência do sacado  - 2 decimais
           vlinha["comp_ocorrencia_sacado"]  = linha[180..209] #   Alfa  //Complemento da ocorrência do sacado
           vlinha["banco_compensacao"]       = linha[210..212] #   Num  //Código do Banco correspondente compens.
-          vlinha["res_banco4"]              = linha[213..239] #   Alfa //Reservado (uso Banco) - Brancos
+          vlinha["res_banco5"]              = linha[213..239] #   Alfa //Reservado (uso Banco) - Brancos
       end
 
       return vlinha
