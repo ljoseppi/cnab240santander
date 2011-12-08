@@ -83,10 +83,14 @@ module Cnab240santander
     end
 
     def add_to_hash(my_hash, combined_hash)
-      my_hash.inject(combined_hash) do |new_hash, (key, value)|
-        (new_hash[key] ||= []) << value
-        new_hash
+      my_hash.each_key do |key|
+        if ( combined_hash.has_key?(key) )
+          combined_hash[ "#{key}-dup" ] = my_hash[key]
+        else
+          combined_hash[key]=my_hash[key]
+        end
       end
+      combined_hash
     end
   end
 end
