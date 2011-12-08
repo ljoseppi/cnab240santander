@@ -1,0 +1,25 @@
+= CNAB240 Santander
+
+== Installing
+
+  $ require 'cnab240santander'
+  $ gem install cnab240santander
+
+== Usage
+
+You can request all the lines:
+
+  $ result = Cnab240santander.retorno(:path => '/home/yourname/file.TXT', :retorna => nil)
+
+You can request only the header:
+
+  $ result = Cnab240santander.retorno(:path => '/home/yourname/file.TXT', :retorna => 0)
+
+Or you can request only the data, optionally merging the T and U segments:
+
+  $ result = Cnab240santander.retorno(:path => '/home/yourname/file.TXT', :retorna => 3, :merge => true)
+
+== Thanks
+
+Thanks to Arthur Alexandre (https://github.com/arthurix), whose project I used as base to this one,
+and to Rafael Macedo (https://github.com/rafaelmacedo), who helped me deploying my first gem.

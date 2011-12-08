@@ -3,7 +3,7 @@
 end
 
 module Cnab240santander
-  def self.retorno(path, retorna)
-    Cnab240santander::Retorno.new(:path => path, :retorna => retorna)
+  def self.retorno(args)
+    Cnab240santander::Retorno.new(args)
   end
 end

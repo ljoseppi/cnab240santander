@@ -12,13 +12,13 @@ describe "Cnab240santander" do
   end
   
   it "should return an array" do
-    cnab = Cnab240santander.retorno(File.dirname(__FILE__)+"/../../RETORNO.TXT", nil)
+    cnab = Cnab240santander.retorno(:path => File.dirname(__FILE__)+"/../../RETORNO.TXT", :retorna => nil)
     cnab.linhas.should be_kind_of(Array)
   end
 
   context "Header file" do
     it "should parse the header file" do
-      cnab = Cnab240santander.retorno(File.dirname(__FILE__)+"/../../RETORNO.TXT", 0)
+      cnab = Cnab240santander.retorno(:path => File.dirname(__FILE__)+"/../../RETORNO.TXT", :retorna => 0)
       cnab.linhas.should be_kind_of(Array)
     end
   end

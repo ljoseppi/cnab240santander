@@ -52,10 +52,8 @@ module Cnab240santander
         while (linha = f.gets)
           tipoLn = linha[7..7].to_i
           if tipoLn == $HEADER_ARQUIVO and args[:retorna] == $HEADER_ARQUIVO #0
-            puts "Processando header"
             linhas << HeaderArquivo.processar(linha)
           elsif tipoLn == $DETALHE and args[:retorna] == $DETALHE #3
-            puts "Processando detalhe"
             segmento = linha[13..13]
             if args[:merge] ==  true
               hash_aux = {}
@@ -75,7 +73,6 @@ module Cnab240santander
             end
         
           elsif args[:retorna].blank?
-            puts "Processando linha..."
             linhas << processarLinha(numLn, linha)
           end
           numLn += 1
