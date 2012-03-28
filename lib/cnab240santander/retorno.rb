@@ -13,7 +13,7 @@ module Cnab240santander
       if args.has_key? :path
         @linhas = processar(args) if validaCNAB240(args[:path])
       else
-        raise Exception, "Necessário informar o :path"
+        raise Exception, "Necessario informar o :path"
       end
     end
 
