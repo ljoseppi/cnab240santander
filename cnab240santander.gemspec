@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency "activesupport", "~> 3.2"
-  s.add_dependency "mocha", "~> 0.9.10"
+  s.add_development_dependency "mocha", "~> 0.9.10"
   s.add_development_dependency "rspec", "~> 2.11"
 end
